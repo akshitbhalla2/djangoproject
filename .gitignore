@@ -1,2 +1,3 @@
 venv/
 secrets/
+mysite/mysite/django_secrets.py
