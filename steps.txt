@@ -1,0 +1,7 @@
+1. Start a new project and make sure the virtual environment is activated. // You should see "(venv) C:\Users\AKSHIT\PycharmProjects\Django>"
+2. pip install django
+3. django-admin startproject mysite // Creates a site page
+4. cd mysite // You should see "(venv) C:\Users\AKSHIT\PycharmProjects\DjangoDemo\mysite>"
+5. python manage.py runserver // Check out "http://127.0.0.1:8000/" OR "localhost:8000/"
+6. CTRL C // To stop running server
+7. python manage.py startapp myapp // Creates app within the site
