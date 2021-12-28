@@ -13,5 +13,5 @@ SOURCE: https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
 1. python manage.py makemigrations // Prepares django to make changes to database
 2. python manage.py migrate // Apply changes
 3. python manage.py createsuperuser // Creates super user. Created credentials can be used to log in.
-4. 
 
+Note: Migrations offer a convenient way to execute SQL code (in the background) to manage the database.
