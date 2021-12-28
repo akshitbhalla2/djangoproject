@@ -15,3 +15,41 @@ SOURCE: https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
 3. python manage.py createsuperuser // Creates super user. Created credentials can be used to log in.
 
 Note: Migrations offer a convenient way to execute SQL code (in the background) to manage the database.
+
+4. python manage.py sqlmigrate myapp 0001 // To check the SQL code executed after we make a migration
+
+# Populating the database manually
+# In terminal: python manage.py shell
+from myapp.models import Post
+from django.contrib.auth.models import User
+# To print all objects (users)
+User.objects.all()
+# To filter users
+user = User.objects.filter(username="akshit")
+print(f"First of the queried users is '{user.first()}'")
+user = User.objects.get(id=1)
+# To display user characteristics
+print(f"The id of the queried user is '{user.id}'")
+print(f"The primary key of the queried user is '{user.pk}'")
+# To display all posts
+Post.objects.all()
+# Populate database (in practice it will be populated by actual users)
+post_1 = Post(
+    title = "Blog 1",
+    content = "First content post",
+    author = user
+)
+post_1.save()
+post_2 = Post(
+    title = "Blog 2",
+    content = "Second content post",
+    author = user
+)
+post_2.save()
+post_3 = Post(
+    title = "Blog 3",
+    content = "Third content post",
+    author = user
+)
+post_3.save()
+
