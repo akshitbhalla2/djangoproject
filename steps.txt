@@ -1,5 +1,6 @@
 SOURCE: https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
 
+
 # Getting started
 1. Start a new project and make sure the virtual environment is activated. // You should see "(venv) C:\Users\AKSHIT\PycharmProjects\DjangoDemo>"
 2. pip install django
@@ -9,14 +10,14 @@ SOURCE: https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
 6. CTRL C // To stop running server
 7. python manage.py startapp myapp // Creates app within the site
 
+
 # Creating a super user (for admin)
 1. python manage.py makemigrations // Prepares django to make changes to database
 2. python manage.py migrate // Apply changes
 3. python manage.py createsuperuser // Creates super user. Created credentials can be used to log in.
-
 Note: Migrations offer a convenient way to execute SQL code (in the background) to manage the database.
-
 4. python manage.py sqlmigrate myapp 0001 // To check the SQL code executed after we make a migration
+
 
 # Populating the database manually
 # In terminal: python manage.py shell
@@ -52,4 +53,10 @@ post_3 = Post(
     author = user
 )
 post_3.save()
+
+
+# Registering apps
+In the admin.py file mention: 
+from .models import Post
+admin.site.register(Post) // Gives admin control over posts - update, delete, etc.
 
