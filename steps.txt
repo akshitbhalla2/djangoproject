@@ -9,6 +9,8 @@ SOURCE: https://youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p
 5. python manage.py runserver // Check out "http://127.0.0.1:8000/" OR "localhost:8000/"
 6. CTRL C // To stop running server
 7. python manage.py startapp myapp // Creates app within the site
+Next, include the created app in the setting.py file under INSTALLED_APPS.
+To use HTML and CSS, create templates/myapp and static/myapp respectively.
 
 
 # Creating a super user (for admin)

@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),          # The default admin site is opened at localhost:8000/admin
-    path('', include('myapp.urls')),          # Looks in myapp.urls at localhost:8000
+    path('admin/', admin.site.urls),                         # The default admin site is opened at localhost:8000/admin
+    path('', include('myapp.urls')),                         # Looks in myapp.urls at localhost:8000
+    path('register/', include('myapp_users.urls')),          # Looks in myapp_users.urls at localhost:8000/register
 ]
